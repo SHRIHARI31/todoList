@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .todo-display-body {
+    @apply bg-white w-[95.3%] rounded-lg  h-[100vh] shadow-md overflow-y-scroll;
+  }
+  .todo-display {
+    @apply p-2  ;
+  }
+  .todo-display > .heading-section {
+    @apply flex gap-4 justify-center bg-blue-100 rounded-md ;
+  }
+  .todo-display > .heading-section > h1 {
+    @apply sm:text-2xl font-semibold tracking-wider text-center ;
+  }
+  .heading-section>img{
+    @apply sm:h-[50px] h-[45px];
+  }
+  .task-section{
+    @apply  m-2 p-2
+  }
+  .strike{
+   
+    @apply line-through text-green-500;
+
+  }
+  .task-section>.task-holder>.task-display-div>li{
+    @apply bg-yellow-50 my-2 p-5  rounded-lg shadow-inner text-base md:text-xl  first-letter:capitalize  text-center overflow-x-clip;
+  }
+  .task-display-div{
+    @apply flex flex-col relative  px-3   ;
+  }
+
+  .task-deadline{
+    @apply lg:absolute lg:top-0 lg:p-1 lg:shadow-lg lg:bg-blue-100 lg:rounded-lg;
+  }
+  .task-completed{
+    @apply lg:absolute lg:bottom-0 lg:right-44 lg:p-1 lg:shadow-lg lg:bg-blue-100 lg:rounded-lg;
+  }
+  .delete-task{
+    @apply lg:absolute lg:bottom-0 lg:right-20 lg:p-1 lg:shadow-lg lg:bg-red-500 lg:text-white lg:rounded-lg;
+  }
+  .task-buttons{
+    @apply lg:h-[40px] h-[20px] hover:cursor-pointer;
+  }
+  .action-holder{
+    @apply flex my-2 justify-between
+  }
+  
+}

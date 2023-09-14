@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .todo-body {
+    @apply h-[100vh] bg-blue-100 p-5;
+  }
+  .todo-container {
+    @apply h-full w-full flex flex-col justify-end gap-5;
+  }
+  .input-area {
+    @apply w-full   flex flex-col sm:flex-row justify-center gap-5 items-center;
+  }
+  .input-area > input[type="text"] {
+    @apply outline-none text-lg  pl-2 rounded-lg shadow-lg w-full p-3 tracking-widest;
+  }
+  .input-area > button {
+    @apply active:scale-110 ease-in-out active:bg-blue-600 rounded-full bg-blue-500;
+  }
+  .input-area > button > img {
+    @apply h-[80px] rounded-full  shadow-sm shadow-blue-500;
+  }
+  .input-area >.date-get>span{
+    @apply font-semibold;
+  }
+  .input-area >.date-get> input[type="datetime-local"] {
+    @apply rounded-lg p-2;
+  }
+}
